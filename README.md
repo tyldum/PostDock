@@ -1,10 +1,11 @@
 # PostDock - Postgres + Docker
 
-Postgres streaming replication cluster for any docker environment (Kubernetes, Docker Compose, Docker Swarm, Apache Mesos)
+PostgreSQL cluster with **High Availability** and **Self Healing** features for any cloud and docker environment (Amazon, Google Cloud, Kubernetes, Docker Compose, Docker Swarm, Apache Mesos)
 
 <img align="right" width="400" src="https://github.com/paunin/PostDock/blob/master/artwork/logo.png?raw=true">
 
 - [Info](#info)
+  * [Features](#features)
   * [Publications](#publications)
   * [What's in the box](#what-s-in-the-box)
   * [Docker images tags convention](#docker-images-tags-convention)
@@ -30,7 +31,19 @@ Postgres streaming replication cluster for any docker environment (Kubernetes, D
 
 -------
 
+[![Build Status](https://travis-ci.org/paunin/PostDock.svg?branch=master)](https://travis-ci.org/paunin/PostDock)
+
 ## Info
+
+### Features
+* High Availability
+* Self Healing and Automated Reconstruction
+* [Split Brain](https://en.wikipedia.org/wiki/Split-brain_(computing)) Tolerance
+* Eventually/Partially Strict/Strict Consistency modes
+* Reads Load Balancing and Connection Pool
+* Incremental backup (with optional zero data loss, [RPO=0](https://en.wikipedia.org/wiki/Recovery_point_objective))
+* Semi-automated Target Moment Recovery Procedure
+* Monitoring exporters for all the components(nodes, balancers, backup)
 
 ### Publications
 * [Article on Medium.com](https://medium.com/@dpaunin/postgresql-cluster-into-kubernetes-cluster-f353cde212de)
